@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Build
+dist/
+.crm_build/
+.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Frappe
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

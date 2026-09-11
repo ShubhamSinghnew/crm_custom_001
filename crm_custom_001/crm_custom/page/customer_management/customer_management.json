@@ -1,0 +1,8 @@
+{
+  "doctype": "Page",
+  "module": "crm_custom",
+  "name": "customer-management",
+  "page_name": "customer-management",
+  "standard": "Yes",
+  "title": "Customer Management"
+}
