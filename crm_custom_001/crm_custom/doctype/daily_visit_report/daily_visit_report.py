@@ -19,7 +19,7 @@ class DailyVisitReport(Document):
 		branch: DF.Literal["Surat", "Mumbai", "Ahmedabad", "Jaipur"]
 		category_of_interest: DF.SmallText | None
 		client: DF.Literal[None]
-		client_category: DF.Literal[None]
+		client_category: DF.Literal["A", "B", "C", "D"]
 		client_type: DF.Literal["Existing Client", "New Client"]
 		contact_person: DF.Data | None
 		discussion: DF.SmallText | None
@@ -39,7 +39,7 @@ class DailyVisitReport(Document):
 		party_name: DF.Data | None
 		person_name: DF.Data | None
 		priority: DF.Literal["Low", "Medium", "High", "Critical"]
-		products_pitched: DF.SmallText | None
+		products_pitched: DF.Data | None
 		purpose: DF.Link
 		rejection_remarks: DF.SmallText | None
 		remarks: DF.Data | None

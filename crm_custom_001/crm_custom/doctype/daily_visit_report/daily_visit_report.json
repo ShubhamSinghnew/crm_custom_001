@@ -135,7 +135,9 @@
    "depends_on": "eval:doc.client_type=='Existing Client'",
    "fieldname": "client_category",
    "fieldtype": "Select",
-   "label": "Customer Category"
+   "label": "Customer Grade",
+   "options": "A\nB\nC\nD",
+   "read_only": 1
   },
   {
    "fieldname": "col_customer_1",
@@ -273,7 +275,7 @@
   {
    "depends_on": "eval:['Sales','Delivery','Phone Call / Virtual Selection'].includes(doc.visit_type)",
    "fieldname": "products_pitched",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Products Pitched"
   },
   {
@@ -325,11 +327,13 @@
   {
    "fieldname": "sb_approval",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Approval"
   },
   {
    "fieldname": "approval_status",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Approval Status",
    "options": "Pending Approval\nApproved\nRejected",
    "read_only": 1
@@ -371,7 +375,7 @@
   }
  ],
  "links": [],
- "modified": "2026-09-11 09:50:06.725164",
+ "modified": "2026-09-15 18:56:53.631246",
  "modified_by": "Administrator",
  "module": "crm_custom",
  "name": "Daily Visit Report",
