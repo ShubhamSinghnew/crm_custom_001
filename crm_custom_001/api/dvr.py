@@ -631,3 +631,20 @@ def get_customer_category_attribute_values():
         frappe.throw(
             "Unable to fetch customer categories from GK Export."
         )
+        
+        
+@frappe.whitelist(allow_guest=True)
+def get_products_from_gk():
+
+    url = "https://gkexport.frappe.cloud/api/method/crm_product_pitch"
+
+    response = requests.get(
+        url,
+        timeout=30
+    )
+
+    response.raise_for_status()
+
+    data = response.json()
+
+    return data.get("message", [])
