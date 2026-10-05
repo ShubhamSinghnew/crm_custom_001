@@ -10,6 +10,7 @@
   "visit_type",
   "purpose_of_visit",
   "status_of_visit",
+  "hide_from_list",
   "amended_from"
  ],
  "fields": [
@@ -41,13 +42,19 @@
    "label": "Status Of Visit",
    "options": "Status Of Visit",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_from_list",
+   "fieldtype": "Check",
+   "label": "Hide From List"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-01 18:36:43.164144",
+ "modified": "2026-10-03 12:30:52.044518",
  "modified_by": "Administrator",
  "module": "crm_custom",
  "name": "Status Of Visit",

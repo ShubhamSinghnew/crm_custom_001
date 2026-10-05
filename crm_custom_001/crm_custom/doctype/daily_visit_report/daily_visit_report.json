@@ -76,7 +76,7 @@
   },
   {
    "fieldname": "branch",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Branch",
    "options": "Surat\nMumbai\nAhmedabad\nJaipur",
@@ -134,9 +134,9 @@
   {
    "depends_on": "eval:doc.client_type=='Existing Client'",
    "fieldname": "client_category",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
+   "hidden": 1,
    "label": "Customer Grade",
-   "options": "A\nB\nC\nD",
    "read_only": 1
   },
   {
@@ -209,6 +209,7 @@
    "description": "Comma separated dummy values e.g. Necklace, Ring, Bangles",
    "fieldname": "category_of_interest",
    "fieldtype": "Small Text",
+   "hidden": 1,
    "label": "Category of Interest"
   },
   {
@@ -375,7 +376,7 @@
   }
  ],
  "links": [],
- "modified": "2026-09-15 18:56:53.631246",
+ "modified": "2026-10-03 17:12:14.914472",
  "modified_by": "Administrator",
  "module": "crm_custom",
  "name": "Daily Visit Report",

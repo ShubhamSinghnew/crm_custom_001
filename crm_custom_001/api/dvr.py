@@ -18,7 +18,7 @@ def get_dvr_for_approval(
 
     # Get Employee data from API
     response = requests.get(
-        "http://127.0.0.1:8000/api/method/get_employee_from_gk",
+        "http://ec2-13-234-27-130.ap-south-1.compute.amazonaws.com:8002/api/method/get_employee_from_gk",
         timeout=10
     )
 
@@ -100,7 +100,6 @@ def get_dvr_for_approval(
             "creation",
             "next_visit_date",
             "approval_status",
-            "review",
             "approved_by",
             "manager_remarks"
         ],
@@ -125,7 +124,7 @@ def get_dvr_for_approval_new_client(
 
     # Get Employee data from API
     response = requests.get(
-        "http://127.0.0.1:8000/api/method/get_employee_from_gk",
+        "http://ec2-13-234-27-130.ap-south-1.compute.amazonaws.com:8002/api/method/get_employee_from_gk",
         timeout=10
     )
 
@@ -208,7 +207,6 @@ def get_dvr_for_approval_new_client(
             "creation",
             "next_visit_date",
             "approval_status",
-            "review",
             "approved_by",
             "manager_remarks"
         ],
@@ -648,3 +646,18 @@ def get_products_from_gk():
     data = response.json()
 
     return data.get("message", [])
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_visit_types():
+    records = frappe.get_all(
+        "Visit Type",
+        filters={
+            "hide_from_list": 0
+        },
+        fields=["name"],
+        order_by="name asc"
+    )
+
+    return [d.name for d in records]

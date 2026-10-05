@@ -9,6 +9,7 @@
  "field_order": [
   "visit_type",
   "purpose_of_visit",
+  "hide_from_list",
   "amended_from"
  ],
  "fields": [
@@ -33,13 +34,19 @@
    "fieldtype": "Data",
    "label": "Purpose  Of Visit",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_from_list",
+   "fieldtype": "Check",
+   "label": "Hide From List"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-09-01 18:33:31.832419",
+ "modified": "2026-10-03 12:29:39.434799",
  "modified_by": "Administrator",
  "module": "crm_custom",
  "name": "Purpose Of Visit",

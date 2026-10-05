@@ -113,11 +113,11 @@ const dvrUrl = ref(
 )
 
 const approvalUrl = ref(
-  `/assets/crm/approval_user.html?v=${Date.now()}`
+  `/assets/crm_custom_001/html/approval_user.html?v=${Date.now()}`
 )
 
 const salesVisitReportUrl = ref(
-  `/assets/crm/sales_visit_report_user.html?v=${Date.now()}`
+  `/assets/crm_custom_001/html/sales_visit_report_user.html?v=${Date.now()}`
 )
 
 function changeTab(tab) {
@@ -135,12 +135,12 @@ function changeTab(tab) {
 
   if (tab === "approval") {
     approvalUrl.value =
-      `/assets/crm/approval_user.html?v=${version}`
+      `/assets/crm_custom_001/html/approval_user.html?v=${version}`
   }
 
   if (tab === "sales_visit_report_user") {
     salesVisitReportUrl.value =
-      `/assets/crm/sales_visit_report_user.html?v=${version}`
+      `/assets/crm_custom_001/html/sales_visit_report_user.html?v=${version}`
   }
 }
 </script>

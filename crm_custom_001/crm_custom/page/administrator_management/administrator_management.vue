@@ -142,12 +142,12 @@ function changeTab(tab) {
   if (tab === "visit-report") {
 
     visitReportUrl.value =
-      `/assets/crm/sales_visit_report_administrator.html?v=${version}`
+      `/assets/crm_custom_001/html/sales_visit_report_administrator.html?v=${version}`
 
   } else if (tab === "follow-up") {
 
     approvalDashboardUrl.value =
-      `/assets/crm/administrator.html?v=${version}`
+      `/assets/crm_custom_001/html/administrator.html?v=${version}`
 
   }
 
